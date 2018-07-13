@@ -6,3 +6,11 @@ RFTagger/
 temp\.txt
 
 \.ipynb_checkpoints/
+
+char_split\.py
+
+char_split_train\.py
+
+CharSplit-master/
+
+CharSplit\.zip
