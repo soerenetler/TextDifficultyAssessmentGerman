@@ -1,6 +1,6 @@
 # TextDifficultyAssessmentGerman
 
-# Requirements
+## Requirements
 python 3.6  
 pandas==0.22.0  
 requests==2.18.4  
@@ -15,7 +15,7 @@ numpy==1.14.0
 matplotlib==2.1.2  
 scikit-learn==0.19.1  
 
-# Preprocessing
+## Preprocessing
 This part of the project was only tested on Ubuntu 18.04.
 
 The preprocessing steps can be found in the "01_Preprocessing" notebook. It includes spellchecking with the hunspell library, POS tagging using RFTagger and parsing with the Stanford Parser. Additionally, some parts of the text are cut off, e.g. addresses or dates before the actual text (in case of letters). The setupRFTagger and setupParser functions can be used to download and setup those components.
@@ -27,7 +27,7 @@ Running the 01_Preprocessing notebook uses the datasets/00_Texts_df.csv file wit
 Both include the following columns:
 Level|Title|Text|Source|cleanedSource|Type|newLevel|cleanedText|RFTagger|parsedText|preprocessedText
 
-# Feature Engineering
+## Feature Engineering
 The theory-driven features are calculated in the following notebooks:
 * 02_BasicFeatures (called traditional features in the paper)
 * 03_LexicalDiversity 
@@ -41,7 +41,7 @@ Each notebook contains the necessary functions for calculating the feature value
 
 Running each notebook in order creates a folder in the datasets folder with the same name as the notebook. The folder will contain the dataframe updated with the features from the notebook, e.g. the 03_LexicalDiversity notebook takes the dataframe created by the 02_BasicFeatures notebook (containing the preprocessed texts and the basic feature values) and adds the lexical diversity feature values to the dataframe that will be placed in the 03_LexicalDiversity folder inside the datasets folder.
 
-# Experiments
+## Experiments
 * 09_Visualisations  
 Running this notebook will produce various visualizations of the data and the features that we used for the project and the paper.    
 ---
